@@ -1,0 +1,9 @@
+name: Playtimeban
+version: '${project.version}'
+main: me.galaxic.playtimeban.Playtimeban
+api-version: 1.19
+authors: [ Galaxic ]
+
+commands:
+  ptb:
+    description: "default playtimeban command"
