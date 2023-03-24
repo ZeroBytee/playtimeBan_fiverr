@@ -47,6 +47,7 @@ public class playtimeBanCmd implements CommandExecutor {
                    long nextDayTime = calendar.getTimeInMillis();
                    playtimeBan.getConfigManager().setNextDay(nextDayTime);
                    player.sendMessage(ChatColor.GREEN + "Successfully completed the setup.");
+                   playtimeBan.getPlaytimeManager().setPlaytime(player, 3 * 3600);
                }
            }
         }

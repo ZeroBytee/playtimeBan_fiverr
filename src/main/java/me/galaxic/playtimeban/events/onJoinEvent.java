@@ -32,7 +32,12 @@ public class onJoinEvent implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
 
-        // start the player timer
+
+
+        if (!player.hasPlayedBefore()) {
+            playtimeBan.getPlaytimeManager().setPlaytime(player, 3 * 3600);
+        }
+
         if (playtimeBan.getPlaytimeManager().getPlaytime(player) == 0) {
             playtimeBan.getConfigManager().addBanned(player.getUniqueId());
         }
